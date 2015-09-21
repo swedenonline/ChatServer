@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Chat Server</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bootstrap.min_3.3.5.css">
+</head>
+<body onbeforeunload="return closeSocket()">
+
+<div class="container">
+  <h4>Chat Server!</h4>
+
+  <div class="row">
+    <div class="col-sm-2" style="background-color:lavender;">
+        <h5>Welcome! <span id="user"></span></h5>
+	  <div class="list-group" id="users_list" style="height:395px;background-color:lavenderblush;"> </div>
+    </div>
+    <div class="col-sm-6" style="background-color:lavenderblush;">
+	
+
+<div id="panel_body" style="height:400px;">
+        
+        	<ul class="list" id="chat_body">
+	    <li class="list-item" style="display:none;">---</li>
+        </ul>
+
+      </div>
+
+
+<div class="col-xs-10">
+  <textarea class="form-control" rows="1" id="comment"></textarea>
+</div>
+<p><button type="button" class="btn btn-primary active" onclick="sendText()">Send</button></p>
+
+</div>
+    
+  </div>
+</div>
+<script src="websocket.js"></script>
+<script type="text/javascript">
+    openSocket();
+    setUserName();
+</script>
+<!--<script src="bootstrap.min_3.3.5.js"></script> -->
+</body>
+</html>
