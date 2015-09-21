@@ -1,6 +1,7 @@
 # ChatServer
-
 v1.0
+
+Access Url: http://localhost:8080/ChatServer
 
 ChatServer handles client server communication using web socket.
 
